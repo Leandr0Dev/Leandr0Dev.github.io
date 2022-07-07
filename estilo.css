@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: sans-serif;
+    
+    min-height: 100%;
+}
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: black;  
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: rgb(192, 185, 185);
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color:white;
+}
+
+.sidebar2{
+    grid-area: sidebar2;
+    background-color:white; 
+}
+
+.sidebar3{
+    grid-area: sidebar3;
+    background-color:black;
+    color: rgb(215, 209, 209);
+    font-size: 1rem;
+}
+
+.main{
+    grid-area: main;
+    background-color: white;
+}
+
+.footer{
+    grid-area: footer;
+    background-color:black;
+    color:rgb(192, 185, 185);
+}
+
+
+.grid-container {
+    display: grid;
+    gap: 15px;
+    grid-template: 
+      "header"    80px
+      "navbar"    150px
+      "main"      auto
+      "sidebar"   100px
+      "sidebar2" 300px
+      "sidebar3" 200px
+      "footer"    100px;
+}
+
+.logo{
+ display: block;
+ position: absolute;
+}
+
+h1{
+    display: inline-block;
+    color: rgb(184, 178, 178);
+    margin-top: 10px;
+}
+
+.boton{
+    background-color:rgb(67, 65, 65);
+    margin-bottom: 7px;
+}
+
+.boton:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white; 
+}
+
+.foto{
+    box-shadow: -3px 2px 9px 1px rgba(0, 0, 0, 1);
+}
+
+iframe{
+    box-shadow: -7px 1px 9px 2px rgba(0, 0, 0, 1);
+}
+
+ .largo{
+    display: none;
+ }
+
+
+
+@media (min-width:900px){
+    .grid-container{
+        grid-template:
+        "header   header   header"   100px
+        "navbar   main     main"     350px
+        "navbar   sidebar  sidebar"  200px
+        "sidebar2 sidebar2 sidebar3" 400px
+        "footer   footer    footer"  100px /
+        300px auto 600px;
+    }
+
+
+.boton{
+    width: auto;
+    background-color:rgb(67, 65, 65);
+    margin-bottom: 70px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    width: 100%;
+    height: 90px;
+    color: gray;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+}
+
+.foto{
+    margin-top: 15px;
+    width: 500px;
+    height: 300px;
+}
+
+.largo{
+    display:block;
+}
+
+iframe{
+    margin-top: 10px;
+    width: 450px;
+    height: 370px;
+}
+
+h3{
+    margin-top: 50px;
+}
+}
